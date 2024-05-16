@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h1 id="kq"></h1>
+
+<input type="text" placeholder="Nhập gì đi em" id="a"> 
+<button onclick="getData()">Nhập</button> 
+<!-- onClick là sự kiện nhấn của HTML và thực hiện hành đông "getData()" được khai báo bên dưới -->
+
+    <script>
+        function getData() { // Khai báo 1 hành gì đó
+           let data = document.getElementById("a").value; // lấy dữ liệu ở ô input
+           alert(data);
+        }
+        
+
+        // Nhập xuất (input/ouput) trong JS
+
+        //Nhập dữ liệu
+        // let a = prompt("Nhập giá trị đi: "); // Hiển thị hộp thoại để người dùng nhập 
+        // alert(a);
+
+
+        // Xuất dữ liệu
+        // alert("Hello"); // Hiển thị lên 1 hộp thoại 
+        // document.write("Hello C04"); // Hiển thị lên 1 trang web;
+        // console.log(a); // Hiển thị trong F12 => Console
+        // let a = "Hello c04";
+        // document.getElementById("kq").innerHTML = a;
+
+
+
+
+
+        /*
+        // Biến: là một tên gọi đại diện cho vùng nhớ chứa dữ liệu.
+        let name = "Linh";
+        // Cú pháp:   let <tên biên> = <giá trị>;
+        alert(name);
+        */
+
+        /*
+        // Tạo một biến có tên là age giá là một số 1704 và hiển thị bằng alert;
+        let age = 25;
+        alert(age);
+        */
+
+        /*
+       let a = 3;
+       let b = 5;
+       let c = a + b; //  + * / - %
+       let d = a * b; // 50;
+       let e = a / b; // 2
+       let f = a - b; // 5
+       let h = a % b; // 0 
+       alert(h); // 3
+       // 3 % 5 = 3
+       */
+
+        /*
+         let a = 3; // let chỉ dùng để khai báo
+         a = 10; // gán lại giá trị cho a 
+         alert(a);
+         */
+
+
+    </script>
+
+</body>
+
+</html>
