@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+
+        if(<dieu kien>) {
+            <Khối lệnh thực thi>
+        }
+        -- Chương trình
+
+        ==> Khối lệnh thực thi sẽ được thực hiện khi <dieu kien> nhận giá true.
+
+        if(<dieu kien>) {
+            <Khoi lenh thuc thi>
+        } else {
+            <Khoi lẹnh thuc thi 2>
+        }
+        ===> <Khoi lenh thuc thi> thực hiện khi <dieu kien> là true, ngược lại <Khoi lẹnh thuc thi 2> thực hiện khi <dieu kien> 
+            là false
+
+        -- Muốn bắt hàng loạt các điều kiện thì có thể sử dụng if bậc thang (if - else if)
+            if(<điều kiện>) {
+                // khối lệnh
+            } else if (<điều kiện>) { 
+                // Khối lệnh
+            } else if (<đieu kien>){
+            // Khối lệnh
+            }  else if (<dieu kien>){
+
+            } else {
+
+            }
+
+            // If thường xuyên kết hợp với toán tử logic : &&, || , !
+
+            && <=> 
+            
+            // Điểm > 5 và pv đạt => qua module
+            let diem = 10;
+            let pv = false;
+            if (diem > 5) { // If lồng nhau
+                if (pv === true) {
+                    alert("Đạt")
+                }
+            }
+
+        */
+
+
+        // switch - case (chọn ra dựa trên trường hợp) (Chỉ có thể so sánh bằng)
+        // Nếu không sử dụng switch-case có thể dùng if => Ngược lại có sử switch - case thay if không ? (Chỉ được trong so sánh bằng)
+        /*
+        let thu = +prompt("Nhập vào số: ") // '3' => 3
+        switch(thu) { // thu = 2 
+            case 1: // 2 === 1 (false)
+                alert("Chủ nhật");
+                // break
+            case 2: // 2 === 2 (true)
+                alert("Thứ 2");
+                // break;
+            case 3:
+                alert("thứ 3");
+                break;
+            case 4:
+                alert("Thứ 4");
+                break;
+            default: // mặc định: sẽ thực thi khi không vào case nào cả
+                alert("Không có thứ này!")
+                break;
+        }
+        */
+
+        //break: Dừng switch - case, nếu không có từ khóa break thì nếu vào case thì nó sẽ đến khi gặp từ khóa break hoặc hết cấu lệnh
+
+        /*
+        switch(thu) { // thu = 2 
+            case 1: // 2 === 1 (false)
+                alert("Chủ nhật");
+                break; // Dừng switch - case
+            case 2: // 2 === 2 (true)
+                alert("Thứ 2");
+                break;
+            case 3:
+                alert("thứ 3");
+                break;
+            case 4:
+                alert("Thứ 4");
+                break;
+        }
+
+        if(thu === 1) {
+            alert("Cn")
+        } else if(thu === 2) {
+            alert("thứ 2")
+        } else {
+            alert("Không có thứ này")
+        }
+        */
+
+        // Toán tử 3 ngôi
+        /*
+        let diem = +prompt("Nhập điểm")
+        let a = (diem > 5) ? "Đạt" : "Trượt";
+        // <==>
+        if(diem > 5) {
+            a = "Đạt"
+        } else {
+            a = "Trượt"
+        }
+        alert(a);
+        */
+
+
+        /*
+        let age = +prompt("Nhập điểm: ")
+        if(age > 18) {
+            alert("Đủ tuổi");
+        } else {
+            alert("Không có tuổi");
+        }
+
+        let a = +prompt("Nhập a"); // 1 số chia hết cho là số chia 2 dư 0;
+       if(a % 2 === 0) {
+        alert("Số chẵn")
+       } else {
+        alert("Số lẻ")
+       }
+
+            
+        let a = +prompt("nhập số a"); // 0
+        let b = +prompt("nhập số b"); // 0
+        a = parseInt(a);
+        b = parseInt(b);
+
+        if (a > b) {
+            let h = a + b
+            alert(" a > b => a+b = " + h)
+        } else if (a < b) {
+            let h = a * b
+            alert(" a < b => a*b = " + h)
+        } else if (a == b) { // a = 4
+            alert("Hihi")
+        }
+        
+
+    //    if("abc") { // Trừ các giá trị undefined, null, 0, '', NaN, false thì giá trị trong () sẽ tự chuyển thành true
+    //     alert("Hello")
+    //    }
+
+    // Điều kiện 1 tam giác: 3 cạnh > 0 và 2 cạnh bất kỳ > lớn cạnh còn lại
+        let a = +prompt("Nhập a");
+        let b = +prompt("Nhập b");
+        let c = +prompt("Nhập c");
+        if(a > 0 && b > 0 && c > 0) {
+            if(a + b > c && b + c > a && c + a > b) {
+                alert("Là 1 tam giác")
+            }
+        }
+
+        let a = +prompt("Nhập a"); // 11
+        let b = +prompt("Nhập b"); // 7
+        let c = +prompt("Nhập c"); // 9
+
+        let max = a; // max = 11
+        if(b > max) { // 7 > 11 (false)
+            max = b; 
+        }
+
+        if(c > max) { // 9 > 11
+            max = c; 
+        }
+    
+        alert("Số lớn nhất là : " + max); // 11
+
+        */
+
+        // Cước tính điện thoại: 2000/1p => Sau 10p tăng 1000 => Sau sau 20p => 20.000. Nhập vào số phút và in ra số tiền phải trả (Vòng lặp)
+        // Cước tính điện thoại: 2000/1p (VN), 3000/1p (TQ), 3500/1p (Lao)
+        let maVung = prompt("Bạn gọi ở đâu?"); // NaN (not a number)
+        if(maVung === "VN") {
+            alert("2000/1p")
+        } else if (maVung === "TQ") {
+            alert("3000/1p");
+        } else if (maVung === "Lao") {
+            alert("3500/1p");
+        }
+
+        // Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng.
+        // doanh thu (10 - 20) ăn 5%, (21-100) ăn 10 %, (> 100) ăn 15%, in ra hoa hồng ăn được.
+    </script>
+</body>
+
+</html>
