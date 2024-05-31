@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng</title>
+</head>
+
+<body>
+    <script>
+        let a = "Lâm";
+        let b = "Linh";
+        let c = "Tuấn";
+        let d = "Đức"; // các tên của một thành viên trong lớp
+        //...
+
+        // mảng: array: là một biến đặc biệt dùng để khai báo một tập hợp các giá trị
+        // let names = ["Lâm", "Minh", "Tuấn", "Đức", "Việt"];
+
+        // Index của mảng 0 => array.length - 1
+        // => Cách duyệt mảng
+        //  for(let i = 0; i < names.length; i ++) {
+        //     console.log("Phần tử vị trí thứ " + i + " là : " + names[i]);
+        // }
+
+        /*
+        // index       0      1       2       3       4
+        // Các truy xuất phần tử trong mảng;
+        console.log(names[1]); // Minh
+        console.log(names[0]); // Lâm
+        names[0] = "Linh"; // Gán lại giá trị cho một phần tử
+        console.log(names[0]);
+
+        // ĐỘ dài mảng names: 
+        console.log("Độ dài mảng names là : " + names.length); // 5
+        console.log(names[names.length - 1]);
+
+
+        // Chỉ số mảng (index): Vị trí của các phần tử (Bắt đầu ở vị trí số 0) 
+        // Phần tử của mảng (element): Là các giá trị có trong mảng 
+        // Độ dài của mảng: Số lượng phần tử có trong mảng
+        */
+
+        // cho 1 mảng chứa các số 6 , 9, 20, 25, 30, 19: 
+        // Hiển thị các phần tử trong mảng trên.
+        // Hiển thị các phần tử chẵn trong mảng.
+        // Hiển thị các phần tử tại vị trí lẻ.
+
+        // let numbers = [6, 9, 20, 25, 30, 29];
+        // for (let i = 0; i < numbers.length; i++) {
+        //     console.log("các phần tử của mảng " + i + " là: " + numbers[i])
+        // }
+
+        // let number = [6, 9, 20, 25, 30, 19];
+        // console.log("Các phần tử chẵn trong mảng :")
+        // for (let i = 0; i < number.length; i++){
+        //     if (number[i] % 2 === 0){
+        //         console.log(number[i]);
+        //     }
+        // }
+
+
+        /*
+        let numbers = [6, 9, 20, 26, 30, 19];
+                 //    0  1   2   3   4   5
+        console.log("Phần tử tại vị trí lẻ là: ")
+        for (let i = 0; i < numbers.length; i++) {
+            if (i % 2 !== 0) { 
+                console.log(numbers[i] + " ");
+            }   
+        }
+        */
+
+
+
+        let names = ["Lâm", "Minh", "Tuấn", "Đức", "Việt"];
+        // Các hàm (chức năng) có sẵn của mảng:
+        console.log("Mảng trước sử dụng: ");
+        console.log(names);
+        // names.push("LInh");  // Thêm phần tử cuối mảng: .push()
+        // names.pop(); // XÓa phần tử ở cuối mảng: .pop()
+        // console.log(names.join("......")); // In ra mảng là một chuỗi cách nhau bởi dấu ở trong ngoặc
+        // names.splice(2, 3); // Xóa 1 hoặc nhiều phần tử phụ thuộc vào dữ liệu truyền vào
+                   // .spice(<vị trí bắt đầu xóa>, <Số lượng phần tử muốn xóa>)
+        names.splice(1, 1);
+        
+        console.log("Mảng sau sử dụng: ");
+        console.log(names);
+
+
+    </script>
+</body>
+
+</html>
