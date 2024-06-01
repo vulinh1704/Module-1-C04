@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        // Kn: Mảng là 1 biến đặc biệt có thể chứa nhiều giá trị
+        // let a = ['a', 1, true, false];
+        // cách khai báo 2: let numbers2 = new Array(4, 5, 8 , 10);
+
+        let numbers = [4, 5, 8, 10];
+// CHỉ số của mảng     0  1  2   3 (bắt đầu từ 0 => length - 1)
+        // Phần tử trong mảng: Giá trị nằm tại một vị trí nào đó trong mảng
+        console.log(numbers[1]) // 5;
+        // Độ dài của mảng: Số lượng phần tử có trong mảng
+        console.log("Số lượng phần tử có trong mảng là: " + numbers.length);  // 4 
+
+        // Cách duyệt mảng:
+        for(let i = 0; i < numbers.length; i++) {
+            console.log("Phân tử tại vị trí " + i + " là : " + numbers[i]);
+        }
+        */
+
+        /*
+        // Các hàm tương tác với mảng
+        let numbers = [4, 5, 8, 10];
+        numbers.splice(2, 1, 21); // Có thể sử dụng splice để chèn thêm hoặc sửa một phần tử bất kỳ
+        console.log(numbers);
+
+        // Xóa phần tử ở vị trí bất kỳ trong mảng
+        // numbers.splice(2, 2); // (vị trị bắt đầu xóa, số lượng phần tử muốn xóa)
+        // console.log(numbers);
+
+
+        // Trả về một chuỗi, có thể sửa lại ký hiệu cách nhau giữa các phần tử
+        // console.log(numbers.join("-------------"));
+
+
+        // Xóa phần tử ở cuối mảng
+        // numbers.pop();
+        // console.log(numbers);
+
+        // Thêm phần tử vào cuối mảng 
+        // numbers.push(200);
+        // console.log(numbers);
+        */
+
+        // let numbers = [1, 7, 5, 9, 2, 6, 7, 9, 7];
+        //         //     0  1  2  3  4  5  6  7  8
+        // let a = +prompt("Nhập số :")
+        // let dem = 0;
+        // for (let i = 0; i < numbers.length; i++) {
+        //    if(a  === numbers[i]) {
+        //     dem = dem + 1; // dem++
+        //    }
+        // }
+        // console.log("Số lần xuất hiện của " + a + " có trong mảng là: " + dem);
+
+
+        // for (let i = 0; i < numbers.length; i++) {
+        //     if (i % 2 === 0) {
+        //         console.log(numbers[i]);
+        //     }
+        // }
+
+
+
+        // for(let i = 0; i < numbers.length; i++) {
+        //     if(numbers[i] % 2 === 0) {
+        //         console.log(numbers[i]);
+        //     }
+        // }
+
+        // for(let i = 0; i < numbers.length; i++) {
+        //     console.log(numbers[i]);
+        // }
+
+
+        /*
+        let numbers = [4, 10, 20, 1, 21, 9];
+        let max = numbers[0]; // max = 4
+        let viTri = 0;
+        for(let i = 0; i < numbers.length; i++) { // i = 2
+            if(numbers[i] > max) { // number[2] > 10 <=> 20 > 10
+                max = numbers[i]; // max = 20
+                viTri = i;
+            }
+        }
+
+        console.log("Phần tử lớn nhất là: " + max + " có vị trí: " + viTri);
+
+        Bài tập: Tìm phần tử lớn thứ 2 trong mảng
+        */
+
+        /*
+        let numbers = [4, 10, 20, 1, 21, 9];
+        let arr = [];
+        for(let i = numbers.length - 1; i >= 0; i--) {
+            arr.push(numbers[i]);
+        }
+        console.log(arr);
+        */
+
+
+        // numbers.reverse();
+        // console.log(numbers);
+        /*
+        let tong = 0;
+        for(let i = 0; i < numbers.length; i++) { 
+           tong = tong + numbers[i];
+        }
+        let trungBing = tong / numbers.length;
+        console.log("Trung  bình cộng các phần tử là: " + trungBing);
+        */
+
+
+        // let numbers = [4, 10, 20, 1, 21, 9];
+        // let numbers2 = [1, 5, 7, 8, 21];
+        // let arr = []; // 
+        // Bài tập: Nối 2 mảng lại với nhau (gợi ý: chạy 2 lần for duyệt 2 mảng)
+        // let arr = numbers.concat(numbers2);
+        // console.log(arr);
+
+        // let numbers = [4, 10, 20, 1, 21, 9];
+        // numbers.sort((a, b) => b - a);
+        // console.log(numbers);
+
+        //     let V = +prompt("Nhập V");
+        //     let flag = false;
+        //     for(let i = 0; i < numbers.length; i++) {
+        //         if(V === numbers[i]) {
+        //             flag = true;
+        //             break;
+        //         }
+        //     }
+
+        //    if(flag) {
+        //     console.log(V + " có nằm trong mảng");
+        //    } else {
+        //     console.log(V + " k nằm trong mảng")
+        //    }
+
+
+        let arr = [ // Mảng 2 chiều là mảng có các phần tử là các mảng con
+            [1, 2, 4],
+            [5, 6, 87],
+            [6, 21, 9]
+        ];
+
+        // Tìm max hàng
+        for (let i = 0; i < arr.length; i++) {
+            let max = arr[i][0];
+            for (let j = 0; j < arr[i].length; j++) { // Duyệt cột nằm trong hàng i
+                if(arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+            }
+            console.log("Max hàng " + i + " là : " + max);
+        }
+
+
+        /*
+        let max = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+            }
+        }
+        console.log("Phần tử lớn nhất của mảng 2 chiều là: " + max);
+        */
+
+
+        /*
+        for(let i = 0; i < arr.length; i++) { // i = 1 => arr[i] = [5, 6, 87]
+            console.log("Hàng " + i);
+            for(let j = 0; j < arr[i].length; j++) { // j = 3; j < 3;
+                console.log(arr[i][j]);// arr[0][2] => 1 2 4
+            }
+        }
+        */
+
+        /*
+        console.log(arr[0][2]); // Hàng 0 Cột 2
+        console.log(arr[1][1]); // Đức
+        console.log(arr[2][2]); // Giang
+        */
+
+    </script>
+</body>
+
+</html>
