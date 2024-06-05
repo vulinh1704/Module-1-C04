@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm trong Js</title>
+</head>
+
+<body>
+    <!-- <button onclick="showHello()">Nhấn</button> -->
+
+    <script>
+        /*
+            Hàm (Phương thức): là một nhóm các câu lệnh có nhiệm vụ thực hiện một chức năng nào đó ở trong chương trình.
+            Function (Method)
+
+            function <tên hàm>() {
+
+            }
+            
+            - Tên hàm sẽ là động từ
+
+
+                  function showHello() { // KHAI BÁO Hàm
+            let name = "Trương Đăng Vũ Linh";
+            alert("Xin chào " + name);
+        }
+
+        // showHello(); // Đây là cách GỌI hàm <tên hàm>();
+        // Hàm có thể sử dụng để tương tác với HTML thông qua các sự kiện (onclick, onchange,...)
+        */
+
+
+        // Các loại hàm 
+        // Hàm có tham số truyền vào.
+        /*
+        function showHello(name) { // Trong ngoặc tròn là danh sách các "THAM SỐ" được truyền vào hàm
+        // Các tham số đơn giản là các biến đại diện cho dữ liệu truyền vào hàm và cách bởi dấu ,
+        // Có thể không có hoặc có nhiều tham số trong 1 hàm 
+            alert("Xin chào " + name);
+        }
+
+        showHello("Trương Đăng Linh"); // Khi gọi hàm có bao nhiêu tham số => truyền bấy nhiêu dữ liệu
+        showHello("C04JV"); // Dữ liệu thực tế truyền vào hàm là "ĐỐI SỐ";
+
+        // Viết 1 hàm nhận vào 2 tham số và alert ra tích của chúng. GỌi hàm truyền vào (4,5) và (2,10)
+        */
+
+        /*
+        function tinhTich(so1, so2) {
+            let tich = so1 * so2;
+            alert("Tích là: " + tich);
+        }
+
+        tinhTich(4, 5)
+        tinhTich(2, 10)
+        */
+
+        // Hàm có giá trị TRẢ VỀ (sử dụng từ khóa "return")
+        /*
+        function getAvg(a, b) {
+            let tong = a + b;
+            let avg = tong / 2;
+            return avg;
+        }
+
+       let c = getAvg(8, 10);
+       c = c + 10;
+
+       let d = getAvg(10, 12);
+       d = d * 2;
+       console.log(c, d);
+       */
+
+        // Khi gặp từ khóa return thì ngay lập tức nó dừng hàm và trả về giá trị
+        // 1 hàm có thể trả về bao nhiêu giá trị ? (Có thể trả về duy nhất 1 giá trị)
+        /*
+        function showHello() {
+             let a = 1;
+             while(true) {
+                 a++;
+                 return a;
+             }
+         }
+ 
+         let a = showHello();
+         console.log(a);
+         */
+
+        function a() {
+            for (let i = 0; i < 10; i++) {
+                for (let j = 1; j < 5; j++) {
+                    console.log(j); // 1  (A)
+                    // 1 1 1 (B)
+                    break; // Dừng vòng lặp gần nhất
+                    // return 10; // Từ khóa return thì chỉ có thể tồn tại trong hàm
+                }
+            }
+        }
+        a();
+
+
+        /*
+        function go() {
+            return; // Dừng hàm và không trả về giá trị 
+            alert("Hello");
+        }
+        
+        let a = go(); // undefined
+        console.log(a);
+        */
+
+
+        // - Tạo hàm tinhTong(a, b) tính tổng 2 số và return về tổng đó.
+
+    </script>
+</body>
+
+</html>
