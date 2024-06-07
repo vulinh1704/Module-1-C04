@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm 2</title>
+</head>
+
+<body>
+    <!-- <button onclick="alertMessage()">Nhấn</button> -->
+
+    <script>
+        // Translate (Nhập tiếng Anh) => Tiếng Việt
+
+        function dich(tu) { // dog
+            let tiengAnh = ["dog", "cat", "banana", "go", "number"];
+            let tiengViet = ["chó", "mèo", "chuối", "đi", "số"];
+
+            let viTriTu = -1;
+            for(let i = 0; i < tiengAnh.length; i++) {
+                if(tu === tiengAnh[i]) {
+                    viTriTu = i;
+                    break;
+                }
+            }
+
+            let tuCanTim = tiengViet[viTriTu];
+            return tuCanTim;
+        }
+        
+        let tuCanTim = prompt("Nhập tiếng Anh: ");
+        let ketQua = dich(tuCanTim);
+        alert("Tiếng Việt là: " + ketQua);
+
+
+        // function addNumbers() { // Khai báo (Khởi tạo) Hàm
+        //         let firstNum = 4;
+        //         let secondNum = 8;
+        //         let result = firstNum + secondNum;
+        //         return result;
+        //         // alert(result); // Alert không chạy vì return lập tức dừng hàm và trả về trị
+        // }
+        
+        // let result = 0;
+        // alert(result);
+        // result = addNumbers(); // Gọi hàm (Sử dụng hàm)
+        // alert(result); // 12
+
+        // function kiemTra(a, b) {
+        //     if(a > b) {
+        //         alert("Tham số 1 lớn hơn tham số 2")
+        //     } else {
+        //         let tong = a + b;
+        //         return tong;
+        //     }
+        // }
+        // kiemTra(4, 2);
+
+        // function tang(number) {
+        //     number++;
+        //     return number;
+        // }
+
+        // let a = tang(10);
+        // alert(a);
+
+
+        // function alertMessage() {
+        //     alert("XIn chao")
+        // }
+
+        /*
+        Hàm: Là 1 nhóm các câu lệnh thực hiện 1 chức năng hay nhiệm vụ nào đó (Phương thức)
+        (Function, Method)
+
+        function <tên hàm>(<danh sách đôi số>) {
+            <Chi tiết triển khai hàm>
+            return..
+        }
+        
+        // Viết 1 hàm trả về tổng của 2 số
+        function getTotal(a, b) { // a và b là 2 tham số truyền vào 
+            let c = a + b;
+            return c; // TRả về 1 giá trị cho hàm và lập tức dừng hàm
+        }
+
+        let tong = getTotal(1, 4); // Gọi hàm 
+        // 1 và 4 là đối số (là giá trị thực sự truyền vào hàm thay cho a và b để thực hiện hàm và lấy ra giá trị)
+        // alert(tong);
+
+        // Muốn gọi hàm trong HTML thì phải thông qua sự kiện
+
+        */
+
+
+        //  Số nguyên tố là: là số CHỈ chia hết cho 1 và chính nó
+        // 2 3 5 7 11 13 17 19 23
+
+        /*
+        function isPrime(number) {
+            let count = 0;
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    count++;
+                }
+            }
+            if (count == 2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        let a = isPrime(8);
+        if(a) {
+            alert("Là số nguyên tố");
+        } else {
+            alert("Không phải số nguyên tố");
+        }
+        */
+
+
+
+
+
+    </script>
+</body>
+
+</html>
