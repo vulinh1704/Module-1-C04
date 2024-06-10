@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý sản phẩm</title>
 </head>
+
 <body>
     <h1>Add New Product</h1>
-    <input type="text" placeholder="New Product"> <button>Save</button>
+    <input type="text" placeholder="New Product" id="newProduct">
+    <div id="btn"><button onclick="add()">Add</button></div>
 
     <h1>Display All Product</h1>
     <table border="1" id="list">
-        
+
     </table>
 
-    <script> 
+    <script>
         let listProduct = ["Bánh cáy", "Bánh mì", "Kẹo bông gòn", "Cơm"]; // mảng chứa dữ liệu động
+
+
+
+        function add() {
+            let newProduct = document.getElementById("newProduct").value;
+            listProduct.push(newProduct);
+            showAll();
+        }
+
+        function remove(index) {
+            let isConfirm = confirm("Bạn có chắc chắn không?")
+            if (isConfirm) {
+                listProduct.splice(index, 1);
+                showAll();
+            }
+
+        }
+
+        function showEdit(index) {
+            let oldProduct = listProduct[index];
+            document.getElementById("newProduct").value = oldProduct;
+            document.getElementById("btn").innerHTML = `<button onclick="edit(${index})">Edit</button>`
+        }
+
+        function edit(index) {
+            let newProduct = document.getElementById("newProduct").value;
+            listProduct[index] = newProduct;
+            showAll();
+            document.getElementById("btn").innerHTML = `<button onclick="add()">Add</button>`
+            document.getElementById("newProduct").value = '';
+        }
 
         function showAll() {
             let html = `
@@ -25,12 +59,12 @@
             </tr>
             `; // Lấy dòng tiêu đề
 
-            for(let i = 0; i < listProduct.length; i++) {
-                html = html +  `
+            for (let i = 0; i < listProduct.length; i++) {
+                html = html + `
                 <tr>
                     <td>${listProduct[i]}</td>
-                    <td><button>Sửa</button></td>
-                    <td><button>Xóa</button></td>
+                    <td><button onclick="showEdit(${i})">Sửa</button></td>
+                    <td><button onclick="remove(${i})">Xóa</button></td>
                 </tr>
                 `
             } // Lấy được các dòng (tr) dữ liệu bên dưới
@@ -45,6 +79,7 @@
         // Xóa, sửa, thêm
         // Luyện tập 2
     </script>
-    
+
 </body>
+
 </html>
