@@ -32,6 +32,33 @@ function remove(index) {
     }
 }
 
+function showFormEdit(index) {
+    let oldProduct = myStore.getOneProduct(index);
+    document.getElementById("id").value = oldProduct.id;
+    document.getElementById("name").value = oldProduct.name;
+    document.getElementById("price").value = oldProduct.price;
+    document.getElementById("img").value = oldProduct.img;
+    document.getElementById("img-edit").style.display = "block";
+    document.getElementById("img-edit").src = oldProduct.img;
+    document.getElementById("btn-save").innerHTML = `<button onclick="edit(${index})">Save</button>`
+}
+
+function edit(index) {
+    let idInput = document.getElementById("id").value;
+    let nameInput = document.getElementById("name").value;
+    let priceInput = document.getElementById("price").value;
+    let imgInput = document.getElementById("img").value;
+    let newProduct = new Product(idInput, nameInput, priceInput, imgInput);
+    myStore.update(index, newProduct);
+    showAll();
+    document.getElementById("id").value = '';
+    document.getElementById("name").value = '';
+    document.getElementById("price").value = '';
+    document.getElementById("img").value = '';
+    document.getElementById("img-edit").style.display = "none";
+    document.getElementById("btn-save").innerHTML = `<button onclick="add()">Add</button>`
+}
+
 function showAll() {
     let list = myStore.listProduct;
     let str = `
@@ -50,7 +77,7 @@ function showAll() {
             <td>${list[i].name}</td>
             <td>${list[i].price}</td>
             <td><img src="${list[i].img}" alt=""></td>
-            <td><button>Sửa</button></td>
+            <td><button onclick="showFormEdit(${i})">Sửa</button></td>
             <td><button onclick="remove(${i})">Xóa</button></td>
         </tr>
         `
